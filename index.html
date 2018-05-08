@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        html, body{
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            font-family: 'Helvetica', sans-serif;
+            }
+            .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50vw;
+            height: 50vh;
+            color: #FFFFFF;
+            transition: background-color 0.55s ease;/*这个主要就是设置背景色变动的时间效果 */
+            cursor: pointer;
+            overflow: hidden;
+            }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* .item{
+            border: 1px solid red;
+            display: flex;
+
+            width: 50vw;
+            height: 50wh;
+        } */
+        .item:nth-child(1){
+            background-color: #26547C;
+        }
+        
+        .item:nth-child(1):hover{
+            background-color: rgb(28, 63, 93) 
+            
+        }
+        
+        .item:nth-child(1):hover .content{
+            transform: scale(1.4); 
+        }
+        /*上一个hover主要是改变背景色，这个hover主要是设置在item这个类被hover的时候，content这个类有transform大小效果，这个写法一定要注意*/
+        .item:nth-child(2){
+            background-color: #EF476F;
+        }
+        .item:nth-child(2):hover{
+            background-color: rgb(236, 33, 82);
+            
+        }
+        
+        .item:nth-child(2):hover .content{
+            transform: scale(1.4); 
+        }
+        .item:nth-child(3){
+            background-color: #FFD166;
+        }
+        .item:nth-child(3):hover{
+            background-color: rgb(255, 197, 61) 
+            
+        }
+        
+        .item:nth-child(3):hover .content{
+            transform: scale(1.4); 
+        }
+        .item:nth-child(4){
+            background-color: #29E7CD;
+        }
+        .item:nth-child(4):hover{
+            background-color: rgb(23, 208, 183) 
+            
+        }
+        
+        .item:nth-child(4):hover .content{
+            transform: scale(1.4); 
+        }
+        .content{
+            text-align: center;
+           transition: transform 0.55s ease;/*这个属性主要是和transform对应的*/
+        }
+        i{ 
+            font-size: 48px; 
+            
+        }
+  
+        h2{ font-size: 1.2rem; }
+        
+    </style>
+</head>
+<body>
+    <div class="item">
+        <div class="content">
+          <i class="fa fa-list"></i>
+          <h2>Tasks</h2>
+        </div>
+    </div>
+    <div class="item">
+        <div class="content">
+          <i class="fa fa-envelope"></i>
+          <h2>Messages</h2>
+        </div>
+    </div>
+    <div class="item">
+        <div class="content">
+          <i class="fa fa-user"></i>
+          <h2>Manage Account</h2>
+        </div>
+    </div>
+    <div class="item">
+        <div class="content">
+          <i class="fa fa-cog"></i>
+          <h2>Settings</h2>
+        </div>
+    </div>
+</body>
+</html>
